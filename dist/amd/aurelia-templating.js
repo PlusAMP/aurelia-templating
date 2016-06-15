@@ -2458,7 +2458,7 @@ define(['exports', 'aurelia-logging', 'aurelia-pal', 'aurelia-metadata', 'aureli
       this._compileNode(content, resources, instructions, source, 'root', !compileInstruction.targetShadowDOM);
 
       var firstChild = content.firstChild;
-      if (firstChild.nodeType === 1) {
+      if (firstChild && firstChild.nodeType === 1) {
         var targetId = firstChild.getAttribute('au-target-id');
         if (targetId) {
           var ins = instructions[targetId];
